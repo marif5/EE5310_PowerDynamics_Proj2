@@ -6,7 +6,7 @@ using SymPy, LinearAlgebra, DataFrames, CSV, Plots, SymPy
 
 include("ACPF.jl")
 include("GenData.jl")
-include("functions2.jl")
+include("functions.jl")
 
 ## ========================== Q1: ACPF and Active and reactive power Gen injections ================================
 # %%

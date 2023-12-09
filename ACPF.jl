@@ -4,18 +4,20 @@ using SymPy, LinearAlgebra, DataFrames, CSV, Plots, SymPy
 
 #importing MAT file data as CSVs to DataFrames
 
-path_1 = "/Users/beyzanuraydin/Desktop/UVM/Fall2023/Energy Sys Analys/project2/Sam Project 1/BranchData.csv"
-path_2 = "/Users/beyzanuraydin/Desktop/UVM/Fall2023/Energy Sys Analys/project2/Sam Project 1/BusData.csv"
-path_3 = "/Users/beyzanuraydin/Desktop/UVM/Fall2023/Energy Sys Analys/project2/Sam Project 1/loadData.csv"
-path_4 = "/Users/beyzanuraydin/Desktop/UVM/Fall2023/Energy Sys Analys/project2/Sam Project 1/GenData.csv"	
-path_5 = "/Users/beyzanuraydin/Desktop/UVM/Fall2023/Energy Sys Analys/project2/Sam Project 1/wind_Data.csv"	
+path_1 = "C:\\Users\\marif\\OneDrive - University of Vermont\\Documents\\PhD UVM\\Academics\\Fall 23\\Electric Power Systems\\Project\\EPS_Proj2\\BranchData.csv"
+path_2 = "C:\\Users\\marif\\OneDrive - University of Vermont\\Documents\\PhD UVM\\Academics\\Fall 23\\Electric Power Systems\\Project\\EPS_Proj2\\BusData.csv"
+path_3 = "C:\\Users\\marif\\OneDrive - University of Vermont\\Documents\\PhD UVM\\Academics\\Fall 23\\Electric Power Systems\\Project\\EPS_Proj2\\loadData.csv"
+path_4 = "C:\\Users\\marif\\OneDrive - University of Vermont\\Documents\\PhD UVM\\Academics\\Fall 23\\Electric Power Systems\\Project\\EPS_Proj2\\GenData.csv"
+path_5 = "C:\\Users\\marif\\OneDrive - University of Vermont\\Documents\\PhD UVM\\Academics\\Fall 23\\Electric Power Systems\\Project\\EPS_Proj2\\wind_Data.csv"
+path_6 = "C:\\Users\\marif\\OneDrive - University of Vermont\\Documents\\PhD UVM\\Academics\\Fall 23\\Electric Power Systems\\Project\\EPS_Proj2\\classical_data.csv"
+path_7 = "C:\\Users\\marif\\OneDrive - University of Vermont\\Documents\\PhD UVM\\Academics\\Fall 23\\Electric Power Systems\\Project\\EPS_Proj2\\inverter_data.csv"
 
 BranchData = CSV.File(path_1) |> DataFrame
 BusData = CSV.File(path_2) |> DataFrame
 loadData = CSV.File(path_3) |> DataFrame
 GenData = CSV.File(path_4) |> DataFrame	
 WindData = CSV.File(path_5) |> DataFrame		
-Lines = size(BranchData,1)	
+Lines = size(BranchData,1)		
  
 
 BranchData.Z = BranchData.R + im*BranchData.X
